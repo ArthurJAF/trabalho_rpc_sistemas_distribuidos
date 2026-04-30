@@ -14,8 +14,9 @@ n = int(input("Digite o tamanho do vetor a ser somado: "))
 arr = list(range(n))
 
 start = time.time()
-resultado = conn.root.sum_array(arr)
+resultado, tempo_servidor = conn.root.sum_array(arr)
 end = time.time()
 
 print("Tempo de execução no cliente: {}".format(end - start))
+print("Tempo de execução no servidor: {}".format(tempo_servidor))
 print("A soma do vetor é: {}".format(resultado))

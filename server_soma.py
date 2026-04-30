@@ -15,8 +15,10 @@ class MyService(rpyc.Service):
         start = time.time()
         result = sum(arr)
         end = time.time()
-        print("Tempo de execução: {}".format(end - start))
-        return result
+        tempo = end - start
+        
+        print("Tempo de execução: {}".format(tempo))
+        return result, tempo
 
 
 if __name__ == "__main__":
