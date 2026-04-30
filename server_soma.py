@@ -18,12 +18,6 @@ class MyService(rpyc.Service):
         tempo = end - start
         print("Tempo de execução: {}".format(tempo))
         return result, tempo
-    
-    def exposed_sum_pig(self, arr):
-        result = sum(arr)
-        print("Eu amo meu pig esse tanto de vezes: {}".format(result))
-        return result
-
 
 if __name__ == "__main__":
     from rpyc.utils.server import ThreadedServer
